@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adăugare comandă</title>
+    <!-- Include Foundation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css">
+    <style>
+        .form-container {
+            margin-top: 30px;
+        }
+        .form-container label {
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <h2>Adăugare comandă</h2>
+                <div class="form-container">
+                    <form method="POST" action="adaugare-comenzi.php">
+                        <label for="idProdus">ID Produs:</label>
+                        <input type="text" id="idProdus" name="idProdus" required>
+
+                        <label for="Nume">Nume:</label>
+                        <input type="text" id="Nume" name="Nume" required>
+                        
+                        <label for="cantitate">Cantitate:</label>
+                        <input type="number" id="cantitate" name="cantitate" min="1">
+
+                        <label for="pretTotal">Preț Total:</label>
+                        <input type="number" id="pretTotal" name="pretTotal" min="0" required>
+
+                        <label for="dataComanda">Data Comandă:</label>
+                        <input type="date" id="dataComanda" name="dataComanda" required>
+
+                        <input type="submit" class="button" value="Adaugă comandă">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

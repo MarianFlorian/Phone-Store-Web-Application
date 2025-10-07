@@ -1,0 +1,6 @@
+.product-card {
+    border: 1px solid #ccc; /* adaugă un chenar solid de 1 pixel cu culoarea gri */
+    padding: 10px; /* adaugă spațiu în interiorul chenarului */
+    border-radius: 5px; /* adaugă o colțură rotunjită de 5 pixeli */
+  }
+  

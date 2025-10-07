@@ -1,0 +1,87 @@
+<?php
+session_start();
+
+// Verifică dacă utilizatorul este autentificat
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation.min.css">
+
+  <style>
+    .phone-table {
+      margin-top: 30px;
+    }
+    .phone-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .phone-table th, .phone-table td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    .phone-table th {
+      background-color: #f2f2f2;
+    }
+    .form-container {
+      margin-top: 20px;
+    }
+  </style>
+
+ <!-- Start Top Bar -->
+ <div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li>Amanet Telefoane</a></li>
+      <li><a href="despre.html">Despre</a></li>
+      <li><a href="telefoane.html">Telefoane</a></li>
+      <li><a href="vinde.html">Vinde</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Cauta..."></li>
+      <li><a href="cos.html">Cos</a></li>
+      <li><a href="autentificare.html">Autentificare</a></li>
+
+    </ul>
+  </div>
+</div>
+<!-- End Top Bar -->
+</head>
+<body>
+
+<div class="grid-container">
+  <h2 class="text-center">Admin dashboard</h2>
+
+  <!-- Butoane pentru redirecționare -->
+  <div class="text-center">
+    <a href="tabel-telefoane-stoc.html" class="button">Vezi telefoane în stoc</a>
+    <a href="tabel-telefoane-verificare.html" class="button">Vezi telefoane în curs de verificare</a>
+    <a href="vizualizare-comenzi.php" class="button">Vezi comenzi plasate</a>
+  </div>
+
+  <!-- Tabel pentru afișarea telefoanelor -->
+  <div class="phone-table">
+    <!-- Continutul tabelului -->
+  </div>
+
+  <div class="phone-table">
+  </div>
+
+  <div class="phone-table">
+  </div>
+
+</div>
+
+</body>
+</html>
